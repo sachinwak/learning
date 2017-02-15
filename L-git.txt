@@ -139,7 +139,7 @@ git push origin master  // push to master
 git branch --merged  // fire command to merged
 git branch -d calc-divide  // delete from staging
 git branch -a // get list of branch
-git push origin --delete calc-divide
+git push origin --delete calc-divide  // push delete on remote
 
 
 
