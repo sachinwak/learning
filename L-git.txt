@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+git --version   // check version
+
+
+git config --global user.name "sachinwak"
+git config --global user.email "sachinw68@gmail.com"
+
+git config --list
+
+
+git help config              // to get help
+git config --help            // to get help
+
+
+ls   // list directory
+ls -la  // list all files in directory
+
+
+git init    // to start git project 
+
+rm -rf .git   // to remove git
+
+
+git status  // get status
+
+touch .gitignore   // ignore files
+
+
+// where are we now
+// working dir , staging, repository
+
+
+git add -A    // add files to staging area
+git add filename    // add a file to staging area
+
+
+git reset filename   // remove from staging
+git reset            // remove from staging
+
+
+git commit -m "initial comments"  // add files to directory
+git log   // check log 
+
+git clone <url> // get git files
+git clone https://github.com/sachinwak/learning.git  
+
+
+//http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+sachin
+=======
 git --version   // check version
 
 
