@@ -1,0 +1,1406 @@
+/* Learning CSS */
+CSS stands for Cascading Style Sheets
+/* The element Selector { property: value;} */
+
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
+
+/* CSS Colors */
+a valid color name - like "red"
+an RGB value - like "rgb(255, 0, 0)"
+a HEX value - like "#ff0000"
+
+
+/* CSS Backgrounds */
+background-color
+background-image: url("paper.gif");
+background-repeat // value no-repeat, repeat-y, repeat-x
+background-attachment: fixed // will not scroll with the rest of the page
+background-position //right top,  left bottom 
+background: #ffffff url("img_tree.png") no-repeat fixed right top;  // Shorthand property
+
+
+/* CSS BORDERS */
+border-style : ; 
+/* dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border 
+ */
+border-width: 12px;
+border-color: red green blue yellow;
+border-radius:
+
+// Individual Sides
+border-top-style: dotted;
+border-right-style: solid;
+border-bottom-style: dotted;
+border-left-style: solid;
+border-left: 6px solid red;  // shorthand
+
+//Shorthand Property
+border: 5px solid red; // border-width , border-style (required), order-color
+
+
+/* CSS MARGIN */
+margin-top: 100px;
+margin-right: 150px;
+margin-bottom: 100px;
+margin-left: 80px;
+
+// Margin - Shorthand Property
+margin: 100px 150px 100px 80px ;  // margin-top, margin-right, margin-bottom, margin-left
+margin: 25px 50px 75px 100px; 
+margin: 25px 50px 75px;
+margin: 25px 50px;
+margin: 25px;
+
+margin: auto; // The auto Value horizontally center the element within its container.
+margin-left: inherit;  // The inherit Value
+
+/* Margin Collapse 
+Top and bottom margins collapsed into a single margin that is equal to the largest of the two margins.
+This does not happen on left and right margins! Only top and bottom margins! */
+h1 {
+    margin: 0 0 50px 0;
+}
+h2 {
+    margin: 20px 0 0 0;
+}
+
+
+/* CSS PADDING */ 
+padding-top: 50px;
+padding-right: 30px;
+padding-bottom: 50px;
+padding-left: 80px;
+
+padding: 50px 30px 50px 80px; 
+
+
+/* CSS HEIGHT AND WIDTH */
+div {
+    height: 200px;
+    width: 50%;
+}
+max-width : 300px;
+Note: The value of the max-width property overrides width.
+
+height, max-height , max-width 	,min-height ,	min-width ,	width
+
+
+/* CSS BOX MODEL */
+Content -> Padding ->Border -> Margin 
+
+
+/* CSS Outline  - like border value*/
+Content -> Padding ->Border -> outline 
+
+outline-style
+outline-color
+outline-width 
+
+
+
+/* CSS Text */
+color: blue;
+Note: For W3C compliant CSS: If you define the color property, you must also define the background-color.
+
+text-align: // left, right, center, justify
+text-decoration: none; // is often used to remove underlines from links:
+a {
+    text-decoration: none; // overline, line-through, underline;
+}
+
+text-transform: // uppercase, lowercase, capitalize
+text-indent: 50px; // indentation of the first line of a text:
+letter-spacing: 3px; //space between the characters
+line-height: 0.8;  //1 = 100%
+
+//Text Direction
+ direction: rtl;
+
+word-spacing: 10;
+text-shadow: 3px 2px red;
+
+
+/* CSS Fonts */
+Sans-serif == plain
+Serif =  lines at the ends
+Monospace =   same width
+
+font-family: "Times New Roman", Times, serif;
+font-style:normal // normal, italic, oblique
+font-weight: normal, bold, 
+font-variant: normal; // normal, small-caps = capital but with camalcase
+
+font-size: 40px;
+//Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+
+// 1em is equal to the current font size
+pixels/16=em  // /* 40px/16=2.5em */
+
+
+/* CSS Icons */
+//Font Awesome Icons
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+//Add the name of the specified icon class to any inline HTML element (like <i> or <span>).
+<i class="fa fa-cloud"></i>
+<i class="fa fa-heart"></i>
+<i class="fa fa-car"></i>
+<i class="fa fa-file"></i>
+<i class="fa fa-bars"></i>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<i class="glyphicon glyphicon-cloud"></i>
+<i class="glyphicon glyphicon-remove"></i>
+<i class="glyphicon glyphicon-user"></i>
+<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-thumbs-up"></i>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<i class="material-icons">cloud</i>
+<i class="material-icons">favorite</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+
+
+
+/* CSS Links */
+
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+
+/* CSS Lists */
+list-style-type; circle // circle, square, upper-roman, lower-alpha
+list-style-image: url('sqpurple.gif');
+list-style-position: inside; //outside, inside
+
+//List - Shorthand property
+list-style: square inside url("sqpurple.gif"); // type, position, image
+
+
+/* CSS Tables */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse; // collapse into one border,
+}
+
+table {
+    width: 100%;
+}
+th {
+    height: 50px;
+    vertical-align: top ;// top, bottom, or middle
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #f5f5f5}
+
+tr:nth-child(even) {background-color: #f2f2f2} //Striped Tables
+
+//Responsive Table
+//Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
+<div style="overflow-x:auto;">
+	<table>
+	... table content ...
+	</table>
+</div> 
+
+
+
+/* CSS Layout - The display Property */
+//Block-level Elements
+<div>
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section>
+
+Inline Elements
+<span>
+<a>
+<img>
+
+//Override The Default Display Value
+li {
+    display: inline; // block, none, inline
+}
+
+//Hide an Element - display:none or visibility:hidden
+
+
+/* CSS Layout - width and max-width  */
+max-width   // responsive if smaller than max width
+min-width   // 100% width    but not less than min width if getting smaller
+
+
+
+/* CSS Layout - The position Property */
+position: 
+static // positioned in normal way
+relative //  positioned relative to its normal position
+fixed // positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+div.fixed { // stick to bottom right
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+absolute  // positioned relative to the nearest positioned ancestor 
+
+z-index: 
+Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
+
+Positioning Text In an Image
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;   
+}
+.bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+
+/* CSS Layout - Overflow */
+// The CSS overflow property specifies whether to clip content or to add scrollbars when the content of an element is too big to fit in a specified area.
+
+overflow :
+visible - Default. The overflow is not clipped. It renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content
+auto - The auto value is similar to scroll, only it add scrollbars when necessary:
+
+Note: The overflow property only works for block elements with a specified height.
+
+overflow-x:;
+overflow-y:;
+
+
+/* CSS Layout - float and clear */
+
+float : //left, right
+clear // left, right, both
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/* CSS Layout - inline-block */
+display : inline-block;  //but they can have a width and a height  // no clear property is needed
+
+
+/* CSS Layout - Horizontal & Vertical Align */
+.center {
+    margin: auto;
+    width: 50%;    
+}
+
+text-align: center;
+
+//Center an Image
+img {
+    display: block;
+    margin: auto;
+}
+
+Left and Right Align - Using position
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+}
+
+Left and Right Align - Using float
+.right {
+    float: right;
+    width: 300px;
+}
+
+Center Vertically - Using padding
+.center {
+    padding: 70px 0;
+    border: 3px solid green;
+    text-align: center;
+}
+
+
+Center Vertically - Using line-height
+div.center {
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid green;
+    text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+div.center p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+Center Vertically - Using position & transform
+.center {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+.center p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   // from current position  to left and right
+}
+
+
+
+/* CSS Combinators */
+explains the relationship between the selectors
+
+descendant selector (space) 	// all inside element
+child selector (>) 				// inside element only immediately
+adjacent sibling selector (+)   // outside element "immediately after" single
+general sibling selector (~) 	// outside element "immediately after" all
+
+
+/* CSS Pseudo-classes  */
+define a special state of an element
+
+Syntax
+selector:pseudo-class {
+    property:value;
+}
+
+a:link 
+a:visited
+a:hover
+a:active 
+
+a.highlight:hover {   //highlight is class
+    color: #ff0000;
+}
+
+div:hover 
+div:hover p 
+
+p:first-child
+
+
+CSS - The :lang Pseudo-class
+q:lang(no) {
+    quotes: "~" "~";
+}
+<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+
+
+Syntax
+selector::pseudo-element {
+    property:value;
+}
+::after 		p::after 			Insert content after every <p> element
+::before 		p::before 			Insert content before every <p> element
+::first-letter 	p::first-letter 	Selects the first letter of every <p> element
+::first-line 	p::first-line 		Selects the first line of every <p> element
+::selection    	p::selection 		Selects the portion of an element that is selected by a user
+
+
+
+/* CSS Opacity / Transparency */
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+background: rgba(76, 175, 80, 0.1);  // css3
+
+
+/* CSS Navigation Bar */
+//Horizontal Navigation Bar
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+</ul>
+
+
+/* CSS Dropdowns */
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>
+
+
+//Right-aligned Dropdown Content
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+<a href="javascript:void(0)" class="dropbtn">Dropdown</a> // tip: prevent any action
+
+
+
+/* CSS Tooltip */
+<style>
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+
+//Positioning Tooltips
+.tooltip .tooltiptext {
+    top: -5px;
+    left: 105%; 
+}
+
+//Bottom Arrow
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;   // this make it like arrow
+}
+
+
+//Fade In Tooltips (Animation)
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+
+
+/* CSS Image Sprites */
+#home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif) 0 0;  // its position (left 0px, top 0px)
+}
+
+
+
+
+
+/* CSS Attribute Selectors */
+a[target] {
+    background-color: yellow;
+}
+
+//CSS [attribute="value"] Selector
+a[target="_blank"] { 
+    background-color: yellow;
+}
+
+[title~="flower"] {
+    border: 5px solid yellow;
+}
+
+[class|="top"] {
+    background: yellow;
+}
+
+//Styling Forms
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+input[type="button"] {
+    width: 120px;
+    margin-left: 35px;
+    display: block;
+}
+
+
+
+/* CSS Forms */
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;  // padding and eventually borders are included in the total width and height of the elements. 
+}
+
+//Input with icon/image
+input[type=text] {
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+
+//Animated Search Input
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;  // animate width
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+
+//Styling Textareas
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;  // to prevent textareas from being resized 
+}
+
+//Styling Select Menus
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+<select id="country" name="country">
+	<option value="au">Australia</option>
+	<option value="ca">Canada</option>
+	<option value="usa">USA</option>
+</select>
+
+
+/* CSS Counters */
+body {
+    counter-reset: section;
+}
+
+h2::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+}
+<h1>Using CSS Counters:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+
+
+//Nesting Counters
+body {
+    counter-reset: section;
+}
+h1 {
+    counter-reset: subsection;
+}
+h1::before {
+    counter-increment: section;
+    content: "Section " counter(section) ". ";
+}
+h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+
+
+/* CSS3 */
+
+/* CSS3 Rounded Corners */
+border-radius: 25px;
+
+border-top-left-radius
+border-top-right-radius
+border-bottom-right-radius	
+border-bottom-left-radius
+
+/* CSS3 Border Images */ ie 11
+
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border.png) 30 round;
+}
+
+/* CSS3 Backgrounds */ ie 9
+background-size
+background-origin
+background-clip
+
+//CSS3 Multiple Backgrounds
+#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+#example1 {
+    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+    padding: 15px;
+}
+
+//CSS3 Background Size
+#div1 {
+    background: url(img_flower.jpg);
+    background-size: 100px 80px; // contain , cover.
+    background-repeat: no-repeat;
+}
+
+#example2 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(img_flwr.gif);
+    background-repeat: no-repeat;
+    background-origin: border-box; // content-box;  // where background start
+     background-clip: padding-box;   // content-box,  border-box   // where border start
+}
+
+
+/* CSS3 Colors */ ie9
+background-color: rgba(255, 0, 0, 0.3);
+
+background-color: hsl(120, 100%, 50%);
+background-color: hsla(120, 100%, 50%, 0.3);
+background-color:rgb(255,0,0);
+opacity:0.6;
+
+
+/* CSS3 Gradients */ ie10
+//Linear Gradients (goes down/up/left/right/diagonally)
+//Radial Gradients (defined by their center)
+
+//Syntax
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+//Linear Gradient - Top to Bottom (this is default)
+
+#grad {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
+}
+
+//Linear Gradient - Left to Right
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, red , yellow); /* Standard syntax */
+}
+
+//Linear Gradient - Diagonal
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red, yellow); /* Standard syntax */
+}
+
+
+//Using Angles
+
+//background: linear-gradient(angle, color-stop1, color-stop2);
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
+}
+
+//Repeating a linear-gradient
+#grad {
+  background: red; /* For browsers that do not support gradients */
+  /* Safari 5.1 to 6.0 */
+  background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%);
+  /* Opera 11.1 to 12.0 */
+  background: -o-repeating-linear-gradient(red, yellow 10%, green 20%);
+  /* Firefox 3.6 to 15 */
+  background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%);
+  /* Standard syntax */
+  background: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+
+/* CSS3 Radial Gradients */
+background: radial-gradient(shape size at position, start-color, ..., last-color);
+background: radial-gradient(red, yellow, green); /* Standard syntax */
+background: radial-gradient(red 5%, yellow 15%, green 60%); /* Standard syntax */
+background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+
+ background: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+
+ //Repeating a radial-gradient.
+  background: repeating-radial-gradient(red, yellow 10%, green 15%);
+
+
+
+/* CSS3 Shadow Effects */ ie9
+text-shadow: 2px 2px 5px red;
+text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+box-shadow: 10px 10px 5px grey;
+
+
+/* CSS3 Text */  ie5.5 to 6
+
+p.test1 {
+    white-space: nowrap; // break-word ? wrap the text inside container //allows long words to be able to be broken and wrap onto the next line. 
+    width: 200px; 
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+p.test2 {
+    white-space: nowrap; 
+    width: 200px; 
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* CSS3 Web Fonts */ // @font-face  ie9
+Tip: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+div {
+    font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+}
+
+
+
+/* CSS3 2D Transforms */ IE 10.0 	9.0 -ms-
+CSS3 transforms allow you to translate, rotate, scale, and skew elements.
+translate()
+rotate()
+scale()
+skewX()
+skewY()
+matrix()
+
+transform: translate(50px, 100px);
+transform: scale(2, 3);
+transform: rotate(20deg);
+transform: rotate(-20deg);
+transform: skewX(20deg);
+transform: skewY(20deg);
+transform: skew(20deg, 10deg);
+
+transform: matrix(1, -0.3, 0, 1, 0, 0);
+//The parameters are as follow: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()):
+
+
+/* CSS3 3D Transforms */ IE 10.0 	
+transform: rotateX(150deg);
+rotateX()
+rotateY()
+rotateZ()
+
+
+
+/* CSS3 Transitions */  IE 10.0 	
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
+div:hover {
+    width: 300px;
+    height: 300px;
+}
+
+
+//Specify the Speed Curve of the Transition
+transition-timing-function: ;
+ease 		- specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+linear 		- specifies a transition effect with the same speed from start to end
+ease-in 	- specifies a transition effect with a slow start
+ease-out 	- specifies a transition effect with a slow end
+ease-in-out - specifies a transition effect with a slow start and end
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+
+transition-delay: 1s;
+
+
+//Transition + Transformation
+
+transition: width 2s, height 2s, transform 2s;
+transform: rotate(180deg);
+
+transition-property: width;
+transition-duration: 2s;
+transition-timing-function: linear;
+transition-delay: 1s;
+
+
+// shorthand
+transition: width 2s linear 1s;
+
+
+
+/* CSS3 Animations */   IE 10.0 
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+/* The animation code */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;  // n or infinite  
+    animation-direction: reverse;   //alternate   "alternate" to make the animation first run forward, then backward, then forward
+    animation-timing-function: ease-in-out;
+}
+
+
+//Animation Shorthand Property
+div {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+div {
+    animation: example 5s linear 2s infinite alternate;
+}
+
+
+/* CSS Images */
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+//Responsive Images
+img {
+    max-width: 100%; //never scale up to be larger than its original size
+    height: auto;
+}
+
+//Image Filters
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+
+//Image Modal (Advanced)
+
+<style>
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Image Modal</h2>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+<p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p>
+
+<img id="myImg" src="img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	img.onclick = function(){
+	    modal.style.display = "block";
+	    modalImg.src = this.src;
+	    captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+	    modal.style.display = "none";
+	}
+</script>
+
+
+
+
+/* CSS Buttons */
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+/* CSS Pagination Examples */
+<ul class="pagination">
+  <li><a href="#">«</a></li>
+  <li><a href="#">1</a></li>
+  <li><a class="active" href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">6</a></li>
+  <li><a href="#">7</a></li>
+  <li><a href="#">»</a></li>
+</ul>
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+
+
+/* CSS3 Multiple Columns */
+.newspaper {
+    column-gap: 40px;
+    column-count: 3;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: lightblue;
+}
+<div class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+</div>
+
+// short hand
+column-rule: 1px solid lightblue;
+
+column-width: 100px;
+h2 {
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+
+
+
+/* CSS3 User Interface */  ie Not supported     
+div {
+    resize: horizontal; //both, verical,horizontal
+    overflow: auto;
+    outline-offset: 15px;
+}
+
+ 
+/* CSS3 Box Sizing */ ie 8.0
+//The CSS3 box-sizing property allows us to include the padding and border in an element's total width and height.
+* {
+    box-sizing: border-box;
+}
+
+.div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.div2 {
+    width: 300px;
+    height: 100px;    
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+
+/* CSS3 Flexible Box */ ie. 11
+//flex (rendered as a block) 
+//or 
+//inline-flex (rendered as inline).
+
+
+
+ 
+/* CSS3 Media Queries */ ie 9.0
+//CSS2 Introduced Media Types  @media
+//CSS3 Introduces Media Queries
+/* 
+    width and height of the viewport
+    width and height of the device
+    orientation (is the tablet/phone in landscape or portrait mode?)
+    resolution
+ */
+
+@media not|only mediatype and (expressions) {
+    CSS-Code;
+}
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+//CSS3 Media Types
+all     // Used for all media type devices
+print   // Used for printers
+screen  // Used for computer screens, tablets, smart-phones etc.
+speech  // Used for screenreaders that "reads" the page out loud
+
+
+ note:
+// min  < below not applicable
+// min  >= applicable or scalable
+
+// max  <= applicable or scalable
+// max  > above not applicable
+
+// final note : if it break the condition of min or max it is not applicable
+
+@media screen and (min-width: 480px) {
+    
+}
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 699px) and (min-width: 520px) { // in between applicable
+    
+}
+
+
+@media screen and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {  // multiple condition
+    
+}
+
+/* CSS3 Media Queries - More Examples */
+//Notice the data-email attribute. In HTML5, we can use attributes prefixed with data- to store information. We will use the data- attribute later.
+//data-email="johndoe@example.com"
