@@ -91,10 +91,58 @@ git reset            // remove from staging
 git commit -m "initial comments"  // add files to directory
 git log   // check log 
 
-git clone <url> // get git files
-git clone https://github.com/sachinwak/learning.git  
+git clone <url> .  // get git files to current directory
+git clone https://github.com/sachinwak/learning.git .
 
 
 //http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
-sachin
+git remote -v   // get url of git
+git branch -a   // get list of branches
+
+
+// push changes
+
+git diff
+git status
+git add -A
+git commit -m "my comments"
+
+// then push
+git pull origin master   // get all latest files
+git push origin master   // push files to repository
+
+
+
+
+// create branch for desired feature
+git branch calc-divide   // create branch
+git checkout calc-divide   // select branch
+
+
+
+
+// After commit  push branch to remote
+git push  -u origin calc-divide  // push to branch
+git branch -a  //// get list of branches
+
+
+// Merge branches
+git checkout master 
+git pull origin master
+git branch --merged  // fire command to merged
+git merge calc-divide  // merged with branch
+git push origin master  // push to master
+
+
+// deleting a branch
+git branch --merged  // fire command to merged
+git branch -d calc-divide  // delete from staging
+git branch -a // get list of branch
+git push origin --delete calc-divide
+
+
+
+
+
+
